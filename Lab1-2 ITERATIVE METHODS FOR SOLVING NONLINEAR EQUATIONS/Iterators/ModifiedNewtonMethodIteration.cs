@@ -4,7 +4,7 @@ namespace Program.Iterators;
 
 public class ModifiedNewtonMethodIteration : IIteration
 {
-    private const float X0 = 2.5f;
+    private const float X0 = -2.5f;
     
     public float Compute(float x)
     {
