@@ -8,15 +8,14 @@ namespace Program
         public static void Main(string[] args)
         {
             float eps = 0.001f;
-            float delta = 0.01f;
             IIteration iteration;
             Console.WriteLine(-2.5f + ": " +(2 * Math.Sin(-2.5f) - (- 2.5f) + 0.4f)*(-2 * Math.Sin(-2.5f)));
             Console.WriteLine(-1.5f + ": " +(2 * Math.Sin(-1.5f) - (- 1.5f) + 0.4f)*(-2 * Math.Sin(-1.5f)));
             while (true)
             {
                 Console.Write("Выберете точность:\n" +
-                              "1 - eps = 0.001, delta = 0.01\n" +
-                              "2 - eps = 0.0001, delta = 0.001\n" +
+                              "1 - eps = 0.001\n" +
+                              "2 - eps = 0.00001\n" +
                               "3 - выход\n" +
                               "> ");
                 var proximityChoice = Convert.ToInt32(Console.ReadLine());
@@ -30,11 +29,9 @@ namespace Program
                 {
                     case 1:
                         eps = 0.001f;
-                        delta = 0.01f;
                         break;
                     case 2:
-                        eps = 0.0001f;
-                        delta = 0.001f;
+                        eps = 0.00001f;
                         break;
                     default:
                         return;
@@ -45,12 +42,11 @@ namespace Program
                     Console.Write("Выберете метод:\n" +
                                   "1 - метод простых итераций\n" +
                                   "2 - метод Ньютона\n" +
-                                  "3 - модифицированный метод Ньютона\n" +
-                                  "4 - назад\n" +
+                                  "3 - назад\n" +
                                   "> ");
                     var methodChoice = Convert.ToInt32(Console.ReadLine());
 
-                    if (methodChoice == 4)
+                    if (methodChoice == 3)
                     {
                         break;
                     }
@@ -63,14 +59,11 @@ namespace Program
                         case 2:
                             iteration = new NewtonMethodIteration();
                             break;
-                        case 3:
-                            iteration = new ModifiedNewtonMethodIteration();
-                            break;
                         default:
                             return;
                     }
 
-                    NonLinearEquationSolver solver = new NonLinearEquationSolver(iteration, eps, delta);
+                    NonLinearEquationSolver solver = new NonLinearEquationSolver(iteration, eps);
                     solver.start();
                 }
             }

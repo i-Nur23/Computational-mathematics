@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>Lab_3_4_ITERATIVE_METHODS_FOR_SOLVING_SYSTEMS_OF_NONLINEAR_EQUATIONS</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Iterators\ModifiedNewtonMethodIteration.cs" />
+    </ItemGroup>
+
+</Project>
