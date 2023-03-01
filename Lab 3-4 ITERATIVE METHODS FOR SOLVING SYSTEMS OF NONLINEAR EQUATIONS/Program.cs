@@ -63,7 +63,7 @@ namespace Program
                             return;
                     }
 
-                    NonLinearEquationSolver solver = new NonLinearEquationSolver(iteration, eps);
+                    NonLinearSystemEquationSolver solver = new NonLinearSystemEquationSolver(iteration, eps);
                     solver.start();
                 }
             }
