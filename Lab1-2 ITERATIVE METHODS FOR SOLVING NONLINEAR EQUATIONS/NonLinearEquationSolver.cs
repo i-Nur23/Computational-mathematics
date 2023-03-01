@@ -22,7 +22,7 @@ public class NonLinearEquationSolver
 
     private bool isStop(float currentX, float nextX)
     {
-        return Math.Abs(currentX - nextX) < _eps && Math.Abs(findResult(nextX)) < _delta;
+        return Math.Abs(currentX - nextX) <= _eps && Math.Abs(findResult(nextX)) <= _delta;
     }
 
     public void start()
