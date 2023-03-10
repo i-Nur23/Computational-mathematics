@@ -7,10 +7,8 @@ namespace Program
     {
         public static void Main(string[] args)
         {
-            float eps = 0.001f;
+            float eps;
             IIteration iteration;
-            Console.WriteLine(-2.5f + ": " +(2 * Math.Sin(-2.5f) - (- 2.5f) + 0.4f)*(-2 * Math.Sin(-2.5f)));
-            Console.WriteLine(-1.5f + ": " +(2 * Math.Sin(-1.5f) - (- 1.5f) + 0.4f)*(-2 * Math.Sin(-1.5f)));
             while (true)
             {
                 Console.Write("Выберете точность:\n" +

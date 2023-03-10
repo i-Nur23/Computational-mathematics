@@ -15,7 +15,7 @@ public class NonLinearSystemEquationSolver
 
     private bool isStop(float currentX, float nextX, float currentY, float nextY)
     {
-        return Math.Abs(currentX - nextX) < _eps && Math.Abs(currentY - nextY) < _eps;
+        return Math.Abs(currentX - nextX) <= _eps && Math.Abs(currentY - nextY) <= _eps;
     }
 
     public void start()
