@@ -71,7 +71,7 @@
                             return;
                     }
 
-                    NonLinearSystemEquationSolver solver = new NonLinearSystemEquationSolver(iterationMethod, eps, initApprox);
+                    LinearAlgebraicEquationsSystemSolver solver = new LinearAlgebraicEquationsSystemSolver(iterationMethod, eps, initApprox);
                     solver.start();
                 }
             }

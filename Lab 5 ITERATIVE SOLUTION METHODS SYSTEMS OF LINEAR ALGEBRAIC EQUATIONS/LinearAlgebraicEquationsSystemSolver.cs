@@ -1,12 +1,12 @@
 ﻿namespace Program;
 
-public class NonLinearSystemEquationSolver
+public class LinearAlgebraicEquationsSystemSolver
 {
     private readonly Methods _iterationMethod;
     private readonly float _eps;
     private readonly Tuple<float, float, float> _initApprox;
 
-    public NonLinearSystemEquationSolver(Methods iterationMethod, float eps, Tuple<float, float, float> initApprox)
+    public LinearAlgebraicEquationsSystemSolver(Methods iterationMethod, float eps, Tuple<float, float, float> initApprox)
     {
         _iterationMethod = iterationMethod;
         _eps = eps;
